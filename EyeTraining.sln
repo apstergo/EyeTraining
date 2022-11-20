@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eyefit.Android", "Eyefit\Eyefit.Android\Eyefit.Android.csproj", "{870FA2E3-AA31-4A4D-9C2C-E15B8D00C305}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyeTraining.Android", "Eyefit\Eyefit.Android\EyeTraining.Android.csproj", "{870FA2E3-AA31-4A4D-9C2C-E15B8D00C305}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eyefit.iOS", "Eyefit\Eyefit.iOS\Eyefit.iOS.csproj", "{E3193FFF-9375-4488-8BA1-6BB07236218D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EyeTraining.iOS", "Eyefit\Eyefit.iOS\EyeTraining.iOS.csproj", "{E3193FFF-9375-4488-8BA1-6BB07236218D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eyefit", "Eyefit\Eyefit\Eyefit.csproj", "{9C554BB0-9F93-46D8-A164-8240FF840C4D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EyeTraining", "Eyefit\Eyefit\EyeTraining.csproj", "{9C554BB0-9F93-46D8-A164-8240FF840C4D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

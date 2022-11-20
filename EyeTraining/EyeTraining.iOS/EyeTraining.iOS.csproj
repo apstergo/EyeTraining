@@ -165,9 +165,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
-    <ProjectReference Include="..\Eyefit\Eyefit.csproj">
-      <Project>{2455857B-3F5D-4C81-8491-55246A55E7BD}</Project>
-      <Name>Eyefit</Name>
+    <ProjectReference Include="..\Eyefit\EyeTraining.csproj">
+      <Project>{9C554BB0-9F93-46D8-A164-8240FF840C4D}</Project>
+      <Name>EyeTraining</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
