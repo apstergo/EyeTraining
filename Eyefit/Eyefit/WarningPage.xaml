@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true" x:Class="Eyefit.WarningPage">
+    <NavigationPage.TitleView>
+        <Label Text="Пользовательское соглашение" FontSize="17" TextColor="Black" Margin="55,2,0,2" VerticalOptions="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Info.png" Order="Primary" Priority="0" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <Grid BackgroundColor="#DDE2E7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="75"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.RowSpan="3" Source="Vector.png" Aspect="Fill" Opacity="0.8"/>
+        <Label Text="Противопоказания к применению" TextColor="Black" FontSize="28" Margin="33,5" Grid.Row="0" FontAttributes="Bold" CharacterSpacing="0.5"/>
+        <ScrollView Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="330"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="44"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="15"/>
+                </Grid.RowDefinitions>
+                <Label Text="Абсолютные:" FontSize="17" FontAttributes="Bold" Grid.Row="0" Margin="33,0" TextColor="#4F4F4E"/>
+                <Label Text="• индивидуальная непереносимость электрического тока&#10; • наличие имплантированного кардиостимулятора" FontSize="17" Grid.Row="1" Margin="33,0" VerticalOptions="Start"/>
+                <Label Text="Относительные:" FontSize="17" FontAttributes="Bold" Grid.Row="2" Margin="33,0" TextColor="#4F4F4E"/>
+                <Label Text="• эпилептический статус&#10;• новообразования любой этиологии и локализации&#10;• острые лихорадочные состояния неясной этиологии&#10;• тромбозы вен&#10;• состояние острого психического, алкогольного или наркотического возбуждения&#10;• поздние сроки беременности и грудное вскармливание&#10;• воспалительные заболевания органа зрения&#10;• послеоперационные состояния органа зрения" FontSize="17" Grid.Row="3" Margin="35,0" VerticalOptions="Start" LineBreakMode="WordWrap"/>
+                <BoxView BackgroundColor="Gray" Grid.Row="4" Margin="35,0" Opacity="0.5"/>
+                <Grid Grid.Row="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="5*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Больше не показывать соглашение" FontSize="13" Grid.Column="0" VerticalOptions="Center" Margin="33,0,0,0"/>
+                    <CheckBox Grid.Column="1" Color="#4CD964" CheckedChanged="CheckBox_CheckedChanged"/>
+                </Grid>
+                <BoxView BackgroundColor="Gray" Grid.Row="6" Margin="35,0" Opacity="0.5"/>
+            </Grid>
+        </ScrollView>
+        <Button Text="Ознакомлен" FontSize="17" TextColor="White" BackgroundColor="#5DCAD8" CornerRadius="13" Margin="33,15" Grid.Row="2" HeightRequest="44" Clicked="Button_Clicked"/>
+    </Grid>
+</ContentPage>

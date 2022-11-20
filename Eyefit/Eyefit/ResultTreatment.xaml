@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:contols="clr-namespace:Eyefit"
+             x:Class="Eyefit.ResultTreatment">
+    
+    <NavigationPage.TitleView>
+        <Label Text="Результаты" FontSize="17" TextColor="Black" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Info.png" Order="Primary" Priority="0"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <Grid ColumnSpacing="0" RowSpacing="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+
+            <Label Text="Результаты офтальмологического обследования" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="15,15,15,5"/>
+            <Label Text="(допольнительные данные)" TextColor="Black" FontSize="10" FontAttributes="Bold" Grid.Row="1" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="33,5"/>
+            <Label Text="АВТОРЕФРАКТОМЕТРИИ" TextColor="Black" FontSize="13" FontAttributes="Bold" Grid.Row="2" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="33,5"/>
+
+            <Frame BackgroundColor="#9B9ECE" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="15,5,5,5" CornerRadius="25" HasShadow="False"/>
+            <Frame BackgroundColor="#9B9ECE" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="15,5,10,5" CornerRadius="25" HasShadow="False"/>
+
+            <Label Text="Левый глаз" TextColor="White" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,25,15,5" FontSize="13"/>
+            <Image Source="positionL.png" Grid.Row="3" Grid.Column="2" Margin="0,12,35,8"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,5,20,6"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,5,20,6"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,2,20,25"/>
+            <!--Sph-->
+            <!--<Label Text="+" TextColor="White" Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Margin="15,0,0,2"/>-->
+            <contols:DataEntry Placeholder="+ 00.00" PlaceholderColor="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,10,2" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="6" Keyboard="Url" x:Name="ShpL"/>
+            <!--Sph-->
+
+            <!--Cyl-->
+            <!--<Label Text="-" TextColor="White" Grid.Row="5" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Margin="15,0,0,2"/>-->
+            <contols:DataEntry Placeholder="- 00.00" PlaceholderColor="White" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,10,2" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="6" Keyboard="Url" x:Name="CylL"/>
+            <!--Cyl-->
+
+            <!--Ax-->
+            <contols:DataEntry Placeholder="180" PlaceholderColor="White" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,15,20" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="AxL"/>
+            <!--Ax-->
+
+            <Label Text="Sph" FontSize="13" TextColor="White" Grid.Row="4" Grid.Column="0" Margin="30,5,15,5"/>
+            <Label Text="Cyl" FontSize="13" TextColor="White" Grid.Row="5" Grid.Column="0" Margin="30,5,15,5"/>
+            <Label Text="Ax" FontSize="13" TextColor="White" Grid.Row="6" Grid.Column="0" Margin="30,5,15,5"/>
+
+            <Label Text="Правый глаз" TextColor="White" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Margin="30,25,15,5"/>
+            <Image Source="positionR.png" Grid.Row="3" Grid.Column="5" Margin="0,12,35,8"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,5,20,6"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,5,20,6"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,2,20,25"/>
+            <Label Text="Sph" FontSize="13" TextColor="White" Grid.Row="4" Grid.Column="3" Margin="30,5,15,5"/>
+            <Label Text="Cyl" FontSize="13" TextColor="White" Grid.Row="5" Grid.Column="3" Margin="30,5,15,5"/>
+            <Label Text="Ax" FontSize="13" TextColor="White" Grid.Row="6" Grid.Column="3" Margin="30,5,15,5"/>
+            <!--Sph-->
+            <!--<Label Text="+" TextColor="White" Grid.Row="4" Grid.Column="4" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,2"/>-->
+            <contols:DataEntry Placeholder="+ 00.00" PlaceholderColor="White" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,10,2" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="6" Keyboard="Url" x:Name="ShpR"/>
+            <!--Sph-->
+
+            <!--Cyl-->
+            <!--<Label Text="-" TextColor="White" Grid.Row="5" Grid.Column="4" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,2"/>-->
+            <contols:DataEntry Placeholder="- 00.00" PlaceholderColor="White" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,10,2" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="6" Keyboard="Url" x:Name="CylR"/>
+            <!--Cyl-->
+
+            <!--Ax-->
+            <contols:DataEntry Placeholder="180" PlaceholderColor="White" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,15,20" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="AxR"/>
+            <!--Ax-->
+
+
+            <Label Text="Острота зрения" TextColor="Black" FontSize="13" FontAttributes="Bold" Grid.Row="7" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="33,5"/>
+
+            <Frame BackgroundColor="#9B9ECE" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="15,5" CornerRadius="20" HasShadow="False"/>
+            <Image Source="positionL.png" Grid.Row="8" Grid.Column="2" Margin="0,14,35,8"/>
+            <Label Text="Левый глаз" TextColor="White" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,25,15,5" FontSize="13"/>
+            <Label Text="ОS" FontSize="13" TextColor="White" Grid.Row="9" Grid.Column="0" Margin="30,5,15,5" IsVisible="False"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Margin="30,0,30,20"/>
+            <!--ОS-->
+            <contols:DataEntry Placeholder="1.0 " PlaceholderColor="White" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,15" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric"  x:Name="OsL"/>
+            <!--ОS-->
+
+
+            <Frame BackgroundColor="#9B9ECE" Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="15,5" CornerRadius="20" HasShadow="False"/>
+            <Image Source="positionR.png" Grid.Row="8" Grid.Column="5" Margin="0,12,35,8"/>
+            <Label Text="Правый глаз" TextColor="White" Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="2" Margin="30,25,15,5" FontSize="13"/>
+            <Label Text="OD" FontSize="17" TextColor="White" Grid.Row="9" Grid.Column="3" Margin="30,5,15,5" IsVisible="False"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="3" Margin="30,0,30,20"/>
+            <!--OD-->
+            <contols:DataEntry Placeholder="1.0" PlaceholderColor="White" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="3" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,15" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="OsR"/>
+            <!--OD-->
+
+
+
+            <Label Text="Внутриглазное давление" TextColor="Black" FontSize="13" FontAttributes="Bold" Grid.Row="10" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="33,5"/>
+
+            <Frame BackgroundColor="#9B9ECE" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="15,5" CornerRadius="20" HasShadow="False"/>
+            <Image Source="positionL.png" Grid.Row="11" Grid.Column="2" Margin="0,14,35,8"/>
+            <Label Text="Левый глаз" TextColor="White" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,25,15,5" FontSize="13"/>
+            <Label Text="ВГД ОS" FontSize="13" TextColor="White" Grid.Row="12" Grid.Column="0" Margin="30,-5,15,5" IsVisible="False"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3" Margin="30,0,30,20"/>
+            <!--ВГД ОS-->
+            <contols:DataEntry Placeholder="18 мм рт. ст."  PlaceholderColor="White" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" HorizontalTextAlignment="Center" FontSize="12" Margin="0,0,0,15" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="VGDL"/>
+            <!--ВГД ОS-->
+
+            <Frame BackgroundColor="#9B9ECE" Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="15,5" CornerRadius="20" HasShadow="False"/>
+            <Image Source="positionR.png" Grid.Row="11" Grid.Column="5" Margin="0,14,35,8"/>
+            <Label Text="Правый глаз" TextColor="White" Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="2" Margin="30,25,15,5" FontSize="13"/>
+            <Label Text="ВГД OD" FontSize="13" TextColor="White" Grid.Row="12" Grid.Column="3" Margin="30,-5,15,5" IsVisible="False"/>
+            <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="12" Grid.Column="3" Grid.ColumnSpan="3" Margin="30,0,30,20"/>
+            <!--ВГД OD-->
+            <contols:DataEntry  Placeholder="18 мм рт. ст." PlaceholderColor="White" Grid.Row="12" Grid.Column="3" Grid.ColumnSpan="3" TextColor="White" HorizontalTextAlignment="Center" FontSize="12" Margin="0,0,0,15" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="VGDR"/>
+            <!--ВГД OD-->
+            <Button Text="Подтвердить" Clicked="Button_Clicked" BackgroundColor="#9B9ECE" TextColor="White" CornerRadius="20" Margin="15,10" Grid.Row="13" Grid.ColumnSpan="6" VerticalOptions="EndAndExpand"/>
+        </Grid>
+    </ScrollView>
+    
+</ContentPage>

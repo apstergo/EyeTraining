@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:contols="clr-namespace:Eyefit"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Eyefit.QuestionPage" Disappearing="ContentPage_Disappearing">
+    <NavigationPage.TitleView>
+        <Label Text="Выбор профиля" FontSize="17" TextColor="Black" Margin="0,2" VerticalOptions="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Info.png" Order="Primary" Priority="0"/>
+    </ContentPage.ToolbarItems>
+    <Grid BackgroundColor="#DDE2E7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.RowSpan="3" Source="Vector.png" Aspect="Fill" Opacity="1"/>
+
+        <StackLayout x:Name="QuestionPrev">
+            <Label Text="Расскажите нам о себе" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Margin="33,25"/>
+            <Label Text="Ответьте пожалуйста на несколько вопросов. Это позволит нам подобрать оптимальный режим работы устройства" FontSize="17" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Margin="33,15"/>
+            <Image Source="woman.png" VerticalOptions="FillAndExpand" Aspect="AspectFit" Margin="70,10"/>
+        </StackLayout>
+
+        <StackLayout IsVisible="False" x:Name="Question1">
+            <Label Text="Как вас зовут?" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Margin="33,25"/>
+            <Label Text="Имя будет использовано для отображения в личном профиле" FontSize="17" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Margin="33,20"/>
+            <Entry Placeholder="Введите имя" PlaceholderColor="#7C8185" VerticalOptions="StartAndExpand" Margin="33,15" x:Name="NameProf" TextChanged="NameProf_TextChanged"/>
+        </StackLayout>
+        <ScrollView IsVisible="False" x:Name="Question2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Сколько вам лет?" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Margin="33,25" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="1" HorizontalOptions="End" x:Name="Question2Q1" CheckedChanged="Question2Q1_CheckedChanged"/>
+                <Label Text="0-25" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="2" HorizontalOptions="End" x:Name="Question2Q2" CheckedChanged="Question2Q2_CheckedChanged"/>
+                <Label Text="26-40" Grid.Row="2" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="3" HorizontalOptions="End" x:Name="Question2Q3" CheckedChanged="Question2Q3_CheckedChanged"/>
+                <Label Text="41-60" Grid.Row="3" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="4" HorizontalOptions="End" x:Name="Question2Q4" CheckedChanged="Question2Q4_CheckedChanged"/>
+                <Label Text="Старше 60 лет" Grid.Row="4" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+            </Grid>
+        </ScrollView>
+        <ScrollView IsVisible="False" x:Name="Question3">
+            <Grid  RowSpacing="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Ваша зрительная нагрузка?" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Margin="33,25" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="1" HorizontalOptions="End" x:Name="Question3Q1" CheckedChanged="Question3Q1_CheckedChanged"/>
+                <Label Text="Чтение и работа за дисплеями с текстами менее 2 часов в день" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="2" HorizontalOptions="End" x:Name="Question3Q2" CheckedChanged="Question3Q2_CheckedChanged"/>
+                <Label Text="Интенсивная смешанная нагрузка менее 5 часов в день" Grid.Row="2" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="3" HorizontalOptions="End" x:Name="Question3Q3" CheckedChanged="Question3Q3_CheckedChanged"/>
+                <Label Text="Интенсивная смешанная нагрузка более 5 часов в день" Grid.Row="3" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="4" HorizontalOptions="End" x:Name="Question3Q4" CheckedChanged="Question3Q4_CheckedChanged"/>
+                <Label Text="Профессиональная зрительная нагрузка (работа с графикой и редакторами, компьютерные игры, работа за микроскопом, часовые мастера, ювелиры и другие)" Grid.Row="4" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,15,5"/>
+            </Grid>
+        </ScrollView>
+        <ScrollView IsVisible="False" x:Name="Question4">
+            <Grid  RowSpacing="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Используете очки или контактные линзы?" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Margin="33,25" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="1" HorizontalOptions="End" x:Name="Question4Q1" CheckedChanged="Question4Q1_CheckedChanged"/>
+                <Label Text="Не использую" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="2" HorizontalOptions="End" x:Name="Question4Q2" CheckedChanged="Question4Q2_CheckedChanged"/>
+                <Label Text="Миопические (-)" Grid.Row="2" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="3" HorizontalOptions="End" x:Name="Question4Q3" CheckedChanged="Question4Q3_CheckedChanged"/>
+                <Label Text="Гиперметропические (+) для коррекции зрения вблизи" Grid.Row="3" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="4" HorizontalOptions="End" x:Name="Question4Q4" CheckedChanged="Question4Q4_CheckedChanged"/>
+                <Label Text="Гиперметропичекие (+) для коррекции зрения вдаль и вблизи" Grid.Row="4" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="5" HorizontalOptions="End" x:Name="Question4Q5" CheckedChanged="Question4Q5_CheckedChanged"/>
+                <Label Text="Астигматические и смешанные" Grid.Row="5" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,15,5"/>
+            </Grid>
+        </ScrollView>
+        <ScrollView IsVisible="False" x:Name="Question5">
+            <Grid  RowSpacing="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Какое у вас внутриглазное давление?" FontSize="28" FontAttributes="Bold" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" Margin="33,25" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="1" HorizontalOptions="End" x:Name="Question5Q1" CheckedChanged="Question5Q1_CheckedChanged"/>
+                <Label Text="Повышение внутриглазного давления не отмечалось" Grid.Row="1" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="2" HorizontalOptions="End" x:Name="Question5Q2" CheckedChanged="Question5Q2_CheckedChanged"/>
+                <Label Text="Периодические повышения выше 22 мм рт.ст." Grid.Row="2" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+                <CheckBox Color="#38A7B5" Grid.Column="0" Grid.Row="3" HorizontalOptions="End" x:Name="Question5Q3" CheckedChanged="Question5Q3_CheckedChanged"/>
+                <Label Text="Частые повышения выше 26 мм рт.ст." Grid.Row="3" Grid.Column="1" VerticalOptions="CenterAndExpand" Margin="0,5,30,5"/>
+            </Grid>
+        </ScrollView>
+        <ScrollView IsVisible="False" x:Name="Neobez">
+            <Grid ColumnSpacing="0" RowSpacing="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="55"/>
+                    <RowDefinition Height="55"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Результаты офтальмологического обследования до курса воздействия" TextColor="Black" FontSize="24" FontAttributes="Bold" Grid.Row="0" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="15,15,15,5"/>
+                <Label Text="Необязательные поля" TextColor="Black" FontSize="10" FontAttributes="Bold" Grid.Row="1" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="33,5"/>
+                <Label Text="Авторефрактометрия" TextColor="Black" FontSize="13" FontAttributes="Bold" Grid.Row="2" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="33,5"/>
+                
+                <Frame BackgroundColor="#9B9ECE" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="15,5,5,5" CornerRadius="25" HasShadow="False"/>
+                <Frame BackgroundColor="#9B9ECE" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="4" Margin="15,5,10,5" CornerRadius="25" HasShadow="False"/>
+
+                <Label Text="Левый глаз" TextColor="White" FontSize="13" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,25,15,5"/>
+                <Image Source="positionL.png" Grid.Row="3" Grid.Column="2" Margin="0,12,35,8"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,5,20,6"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,5,20,6"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,2,20,25"/>
+                <!--Sph-->
+                <!--<Label Text="+" TextColor="White" Grid.Row="4" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Margin="15,0,0,2"/>-->
+                <contols:DataEntry Placeholder="+ 00.00" PlaceholderColor="White" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,10,2" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="6" Keyboard="Url" x:Name="ShpL"/>
+                <!--Sph-->
+
+                <!--Cyl-->
+                <!--<Label Text="-" TextColor="White" Grid.Row="5" Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center" Margin="15,0,0,2"/>-->
+                <contols:DataEntry Placeholder="- 00.00" PlaceholderColor="White" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,10,2" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="6" Keyboard="Url" x:Name="CylL"/>
+                <!--Cyl-->
+
+                <!--Ax-->
+                <contols:DataEntry Placeholder="180" PlaceholderColor="White" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,15,20" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="AxL"/>
+                <!--Ax--> 
+
+                <Label Text="Sph" FontSize="13" TextColor="White" Grid.Row="4" Grid.Column="0" Margin="30,5,15,5" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Cyl" FontSize="13" TextColor="White" Grid.Row="5" Grid.Column="0" Margin="30,5,15,5" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Ax" FontSize="13" TextColor="White" Grid.Row="6" Grid.Column="0" Margin="30,-15,15,5" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+                <Label Text="Правый глаз" FontSize="13" TextColor="White" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="2" Margin="30,25,15,5"/>
+                <Image Source="positionR.png" Grid.Row="3" Grid.Column="5" Margin="0,12,35,8"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,5,20,6"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,5,20,6"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="2" Margin="0,2,20,25"/>
+                <Label Text="Sph" FontSize="13" TextColor="White" Grid.Row="4" Grid.Column="3" Margin="30,5,15,5" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Cyl" FontSize="13" TextColor="White" Grid.Row="5" Grid.Column="3" Margin="30,5,15,5" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <Label Text="Ax" FontSize="13" TextColor="White" Grid.Row="6" Grid.Column="3" Margin="30,-15,15,5" VerticalOptions="Center" HorizontalOptions="Center"/>
+                <!--Sph-->
+                <!--<Label Text="+" TextColor="White" Grid.Row="4" Grid.Column="4" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,2"/>-->
+                <contols:DataEntry Placeholder="+ 00.00" PlaceholderColor="White" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,10,2" BackgroundColor="Transparent" CursorPosition="0" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Url" x:Name="ShpR"/>
+                <!--Sph-->
+
+                <!--Cyl-->
+                <!--<Label Text="-" TextColor="White" Grid.Row="5" Grid.Column="4" HorizontalOptions="Start" VerticalOptions="Center" Margin="10,0,0,2"/>-->
+                <contols:DataEntry Placeholder="- 00.00" PlaceholderColor="White" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,10,2" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="5" Keyboard="Url" x:Name="CylR"/>
+                <!--Cyl-->
+
+                <!--Ax-->
+                <contols:DataEntry Placeholder="180" PlaceholderColor="White" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="2" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,15,20" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="AxR"/>
+                <!--Ax-->
+                
+
+                <Label Text="Острота зрения" TextColor="Black" FontSize="13" FontAttributes="Bold" Grid.Row="7" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="33,5"/>
+
+                <Frame BackgroundColor="#9B9ECE" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="15,5" CornerRadius="20" HasShadow="False"/>
+                <Image Source="positionL.png" Grid.Row="8" Grid.Column="2" Margin="0,14,35,8"/>
+                <Label Text="Левый глаз" TextColor="White" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,25,15,5" FontSize="13"/>
+                <Label Text="ОS" FontSize="17" TextColor="White" Grid.Row="9" Grid.Column="0" Margin="30,5,15,5" IsVisible="False"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" Margin="30,0,30,20"/>
+                <!--ОS-->
+                <contols:DataEntry Placeholder="1.0 " PlaceholderColor="White" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,15" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="OsL"/>
+                <!--ОS-->
+
+
+                <Frame BackgroundColor="#9B9ECE" Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="15,5" CornerRadius="20" HasShadow="False"/>
+                <Image Source="positionR.png" Grid.Row="8" Grid.Column="5" Margin="0,12,35,8"/>
+                <Label Text="Правый глаз" TextColor="White" Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="2" FontSize="13" Margin="30,25,15,5"/>
+                <Label Text="OD" FontSize="17" TextColor="White" Grid.Row="9" Grid.Column="3" Margin="30,5,15,5" IsVisible="False"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="3" Margin="30,0,30,20"/>
+                <!--OD-->
+                <contols:DataEntry Placeholder="1.0" PlaceholderColor="White" Grid.Row="9" Grid.Column="3" Grid.ColumnSpan="3" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0,0,0,15" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="OsR"/>
+                <!--OD-->
+
+
+
+                <Label Text="Внутриглазное давление" TextColor="Black" FontSize="13" FontAttributes="Bold" Grid.Row="10" Grid.ColumnSpan="6" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="33,5"/>
+
+                <Frame BackgroundColor="#9B9ECE" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="15,5" CornerRadius="20" HasShadow="False"/>
+                <Image Source="positionL.png" Grid.Row="11" Grid.Column="2" Margin="0,14,35,8"/>
+                <Label Text="Левый глаз" TextColor="White" Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2" Margin="30,25,15,5" FontSize="13"/>
+                <Label Text="ВГД ОS" FontSize="15" TextColor="White" Grid.Row="12" Grid.Column="0" Margin="30,-5,15,5" IsVisible="False"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3" Margin="30,0,30,20"/>
+                <!--ВГД ОS-->
+                <contols:DataEntry Placeholder="18 мм рт. ст."  PlaceholderColor="White" Grid.Row="12" Grid.Column="0" Grid.ColumnSpan="3" TextColor="White" HorizontalTextAlignment="Center" FontSize="12" Margin="0,0,0,15" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="VGDL"/>
+                <!--ВГД ОS-->
+
+                <Frame BackgroundColor="#9B9ECE" Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Margin="15,5" CornerRadius="20" HasShadow="False"/>
+                <Image Source="positionR.png" Grid.Row="11" Grid.Column="5" Margin="0,14,35,8"/>
+                <Label Text="Правый глаз" TextColor="White" Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="2" Margin="30,25,15,5" FontSize="13"/>
+                <Label Text="ВГД OD" FontSize="15" TextColor="White" Grid.Row="12" Grid.Column="3" Margin="30,-5,15,5" IsVisible="False"/>
+                <Frame BackgroundColor="#6E729F" CornerRadius="15" Grid.Row="12" Grid.Column="3" Grid.ColumnSpan="3" Margin="30,0,30,20"/>
+                <!--ВГД OD-->
+                <contols:DataEntry  Placeholder="18 мм рт. ст." PlaceholderColor="White" Grid.Row="12" Grid.Column="3" Grid.ColumnSpan="3" TextColor="White" HorizontalTextAlignment="Center" FontSize="12" Margin="0,0,0,15" BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" MaxLength="3" Keyboard="Numeric" x:Name="VGDR"/>
+                <!--ВГД OD-->
+            </Grid>
+        </ScrollView>
+        
+        <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="#FFFFFF"
+                   SelectedIndicatorColor="#38A7B5"
+                   HorizontalOptions="Center" Grid.Row="1" IndicatorSize="9" Count="7"/>
+        <Button Text="Начать" BackgroundColor="#5DCAD8" x:Name="QuestionButton" TextColor="White" Grid.Row="2" Margin="33,10" CornerRadius="15" VerticalOptions="StartAndExpand" Clicked="Button_Clicked"/>
+        <Grid Grid.Row="0" Grid.RowSpan="3" IsVisible="False" x:Name="ConLost">
+            <BoxView BackgroundColor="#5DCAD8" Grid.Row="0" Opacity="0.5"/>
+            <Label Text="Соединение потеряно" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" TextColor="White" FontSize="28"/>
+        </Grid>
+    </Grid>
+</ContentPage>

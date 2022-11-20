@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Eyefit.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <BoxView BackgroundColor="Gray" Grid.Row="0"/>
+        <!--Второй вопрос-->
+        <Grid Grid.Row="1" x:Name="Question2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Вопрос 2. Возраст" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" FontSize="25" FontAttributes="Bold" Margin="15"/>
+            <Label Text="0-25 лет" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question1Checkbox1" CheckedChanged="Question1Checkbox1_CheckedChanged" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="26-40 лет" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question1Checkbox2" CheckedChanged="Question1Checkbox2_CheckedChanged" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="41-60 лет" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question1Checkbox3" CheckedChanged="Question1Checkbox3_CheckedChanged" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="Старше 60 лет" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question1Checkbox4" CheckedChanged="Question1Checkbox4_CheckedChanged" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+        </Grid>
+        <!--Третий вопрос-->
+        <Grid Grid.Row="1" IsVisible="False" x:Name="Question3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Вопрос 2. Возраст" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" FontSize="25" FontAttributes="Bold" Margin="15"/>
+            <Label Text="0-25 лет" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question2Checkbox1" CheckedChanged="Question1Checkbox1_CheckedChanged" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="26-40 лет" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question2Checkbox2" CheckedChanged="Question2Checkbox2_CheckedChanged" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="41-60 лет" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question2Checkbox3" CheckedChanged="Question2Checkbox3_CheckedChanged" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="Старше 60 лет" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question2Checkbox4" CheckedChanged="Question2Checkbox4_CheckedChanged" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+        </Grid>
+        <!--Четвертый вопрос-->
+        <Grid Grid.Row="1" IsVisible="False" x:Name="Question4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Вопрос 4. Возраст" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="Center" FontSize="25" FontAttributes="Bold" Margin="15"/>
+            <Label Text="0-25 лет" Grid.Row="1" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question3Checkbox1" CheckedChanged="Question3Checkbox1_CheckedChanged" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="26-40 лет" Grid.Row="2" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question3Checkbox2" CheckedChanged="Question3Checkbox2_CheckedChanged" Grid.Row="2" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="41-60 лет" Grid.Row="3" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question3Checkbox3" CheckedChanged="Question3Checkbox3_CheckedChanged" Grid.Row="3" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+            <Label Text="Старше 60 лет" Grid.Row="4" Grid.Column="1" VerticalOptions="Center" FontSize="15"/>
+            <CheckBox x:Name="Question3Checkbox4" CheckedChanged="Question3Checkbox4_CheckedChanged" Grid.Row="4" Grid.Column="0" VerticalOptions="Center" Margin="15"/>
+        </Grid>
+        <Button Text="Далее" Clicked="Button_Clicked" IsEnabled="False" x:Name="NextButton" Grid.Row="2"/>
+    </Grid>
+
+</ContentPage>

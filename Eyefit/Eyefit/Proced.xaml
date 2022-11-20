@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"             
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true" x:Class="Eyefit.Proced">
+    
+    <NavigationPage.TitleView>
+        <Label Text="Пользовательское соглашение" FontSize="17" TextColor="Black" Margin="55,2,0,2" VerticalOptions="Center"/>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Info.png" Order="Primary" Priority="0"/>
+    </ContentPage.ToolbarItems>
+
+    <Grid BackgroundColor="#DDE2E7">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.RowSpan="3" Source="Vector.png" Aspect="Fill" Opacity="1"/>
+        <Frame BackgroundColor="White" Padding="24" Margin="15,15,15,10" CornerRadius="25" HasShadow="False">
+            <StackLayout>
+                <Label Text="Программа №1" FontSize="28"/>
+                <Label Text="Вам рекомендована программа воздействия импульсными токами на параорбитальную область для профилактики зрительного утомления, включающая различные режимы в диапазоне частот 60-80 Гц,а также модулированного сигнала 77АМ." FontSize="13"/>
+            </StackLayout>
+        </Frame>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="64"/>
+                <RowDefinition Height="280"/>
+            </Grid.RowDefinitions>
+            <Frame BackgroundColor="#4F4F4E" CornerRadius="30" HasShadow="False" Grid.Row="1" Grid.RowSpan="2" Margin="19,19,19,24">
+                
+            </Frame>
+        </Grid>
+    </Grid>
+</ContentPage>
